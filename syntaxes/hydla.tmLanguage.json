@@ -1,0 +1,96 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "HydLa",
+	"scopeName": "source.hydla",
+	"patterns": [
+		{
+			"include": "#module"
+		},
+		{
+			"include": "#always_operator"
+		},
+		{
+			"include": "#def_operator"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#var_name"
+		},
+		{
+			"include": "#constant_number"
+		}
+	],
+	"repository": {
+		"module": {
+			"patterns": [
+				{
+					"name": "variable.other.hydla",
+					"match": "[A-Z]+"
+				}
+			]
+		},
+		"always_operator": {
+			"patterns": [
+				{
+					"name": "variable.other.keyword.operator.hydla.always",
+					"match": "\\[\\]"
+				}
+			]
+		},
+		"def_operator": {
+			"patterns": [
+				{
+					"name": "invalid.illegal.hydla.def",
+					"match": "(:=|<=>|<<)"
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"include": "#comment_line"
+				},
+				{
+					"include": "#comment_block"
+				}
+			],
+			"repository": {
+				"comment_line": {
+					"patterns": [
+						{
+							"name": "comment.line.double-slash.hydla",
+							"match": "\/\/.*"
+						}
+					]
+				},
+				"comment_block": {
+					"patterns": [
+						{
+							"name": "comment.block.documentation.hydla",
+							"begin": "/\\*",
+							"end": "\\*/"
+						}
+					]
+				}
+			}
+		},
+		"var_name": {
+			"patterns": [
+				{
+					"name": "entity.name.function.hydla",
+					"match": "-?[a-z]+[0-9]*(')*-?"
+				}
+			]
+		},
+		"constant_number": {
+			"patterns": [
+				{
+					"name": "constant.numeric.hydla",
+					"match": "-?[0-9]+"
+				}
+			]
+		}
+	}
+}

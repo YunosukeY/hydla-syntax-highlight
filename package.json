@@ -1,0 +1,25 @@
+{
+    "name": "kimitsu-hydla-syntax-highlight",
+    "displayName": "HydLa Syntax Highlight",
+    "description": "Language Support for HydLa",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "hydla",
+            "aliases": ["HydLa", "hydla"],
+            "extensions": [".hydla"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "hydla",
+            "scopeName": "source.hydla",
+            "path": "./syntaxes/hydla.tmLanguage.json"
+        }]
+    }
+}
