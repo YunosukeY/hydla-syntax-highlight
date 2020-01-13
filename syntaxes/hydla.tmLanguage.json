@@ -27,7 +27,7 @@
 			"patterns": [
 				{
 					"name": "variable.other.hydla",
-					"match": "[A-Z]+"
+					"match": "[A-Z][a-zA-Z0-9_]*"
 				}
 			]
 		},
@@ -80,7 +80,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.function.hydla",
-					"match": "-?[a-z]+[0-9]*(')*-?"
+					"match": "-?[a-z][a-zA-Z0-9]*(')*-?"
 				}
 			]
 		},
