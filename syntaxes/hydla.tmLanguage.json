@@ -4,42 +4,51 @@
 	"scopeName": "source.hydla",
 	"patterns": [
 		{
-			"include": "#module"
+			"include": "#hylagi_section"
 		},
 		{
-			"include": "#always_operator"
+			"include": "#hylagi_tag"
 		},
 		{
-			"include": "#def_operator"
+			"include": "#hylagi_log"
 		},
 		{
 			"include": "#comment"
 		},
 		{
-			"include": "#var_name"
+			"include": "#hydla_module"
 		},
 		{
-			"include": "#constant_number"
+			"include": "#hydla_always_operator"
+		},
+		{
+			"include": "#hydla_def_operator"
+		},
+		{
+			"include": "#hydla_var_name"
+		},
+		{
+			"include": "#hydla_constant_number"
 		}
 	],
 	"repository": {
-		"module": {
+		"hydla_module": {
 			"patterns": [
 				{
-					"name": "variable.other.hydla",
+					"name": "variable.other.hydla.module",
 					"match": "[A-Z][a-zA-Z0-9_]*"
 				}
 			]
 		},
-		"always_operator": {
+		"hydla_always_operator": {
 			"patterns": [
 				{
-					"name": "variable.other.keyword.operator.hydla.always",
+					"name": "variable.other.hydla.always",
 					"match": "\\[\\]"
 				}
 			]
 		},
-		"def_operator": {
+		"hydla_def_operator": {
 			"patterns": [
 				{
 					"name": "invalid.illegal.hydla.def",
@@ -50,14 +59,14 @@
 		"comment": {
 			"patterns": [
 				{
-					"include": "#comment_line"
+					"include": "#comment_slash"
 				},
 				{
 					"include": "#comment_block"
 				}
 			],
 			"repository": {
-				"comment_line": {
+				"comment_slash": {
 					"patterns": [
 						{
 							"name": "comment.line.double-slash.hydla",
@@ -76,19 +85,43 @@
 				}
 			}
 		},
-		"var_name": {
+		"hydla_var_name": {
 			"patterns": [
 				{
-					"name": "entity.name.function.hydla",
+					"name": "entity.name.function.hydla.variable",
 					"match": "-?[a-z][a-zA-Z0-9]*(')*-?"
 				}
 			]
 		},
-		"constant_number": {
+		"hydla_constant_number": {
 			"patterns": [
 				{
-					"name": "constant.numeric.hydla",
+					"name": "constant.numeric.hydla.number",
 					"match": "-?[0-9]+"
+				}
+			]
+		},
+		"hylagi_section": {
+			"patterns": [
+				{
+					"name": "string.unquoted.hylagi.section",
+					"match": "---.*---"
+				}
+			]
+		},
+		"hylagi_tag": {
+			"patterns": [
+				{
+					"name": "entity.name.tag.hylagi.tag",
+					"match": "(unadopted modules|unsat modules|unsat constraints|positive|negative|Simulation Time|Finish Time)"
+				}
+			]
+		},
+		"hylagi_log": {
+			"patterns": [
+				{
+					"name": "entity.name.tag.hylagi.log",
+					"match": "@.*(function|trace|input|parse)"
 				}
 			]
 		}

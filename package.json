@@ -19,7 +19,8 @@
                     "hydla"
                 ],
                 "extensions": [
-                    ".hydla"
+                    ".hydla",
+                    ".hylagi"
                 ],
                 "configuration": "./language-configuration.json"
             }
