@@ -5,5 +5,5 @@ This extension provides syntax highlight for your hydla files.
 
 This extension also supports highlightint HyLaGI's outputs.
 
-![screenshot2.png](https://user-images.githubusercontent.com/39757050/72230733-d59aa780-35fa-11ea-9776-dd4acbb4bb96.png)
+![screenshot2.png](https://user-images.githubusercontent.com/39757050/72231726-6627b680-3600-11ea-9594-3bcaeb299284.png)
 ![screenshot3.png](https://user-images.githubusercontent.com/39757050/72230735-d7fd0180-35fa-11ea-9b62-8a95f0e3d94e.png)
